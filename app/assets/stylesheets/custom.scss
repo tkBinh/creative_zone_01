@@ -1,0 +1,253 @@
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+@import 'color';
+
+body {
+  padding-top: 60px;
+}
+
+.navbar {
+  background-color: white;
+}
+
+section {
+  overflow: auto;
+}
+
+.jumbotron {
+    padding-bottom: 1px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.btn-default {
+  &:hover {
+    color: blue;
+  }
+}
+
+.main{
+  background-color: $background-color-main;
+  margin-left: 15%;
+  margin-right: 15%;
+  background-color: white;
+  -moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+  h1 {
+    padding-top: 10px;
+  }
+}
+
+.right-side {
+  float: right !important;
+  display: flex;
+  padding-left: 10px;
+  padding-top: 20px;
+  list-style-type: none;
+}
+
+.center {
+  text-align: center;
+  h1 {
+    margin-bottom: 10px;
+  }
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-family: Lato;
+}
+
+h2 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: $gray-light;
+  font-family: Lato;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+.menu {
+  height: 60px;
+  padding-top: 25px;
+  background-color: white;
+  text-align: center;
+  color:white;
+  position: fixed;
+  width: 100%;
+  border-bottom: 1px solid black;
+  a {
+    text-decoration: none;
+    margin-top: 5px;
+    font-size: 18px;
+    color: $menu-color;
+    font-size: Lato;
+    margin-right: 15px;
+    &:hover {
+      color: blue;
+    }
+  }
+}
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 40px;
+  color: black;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-family: Springtime in April;
+  &:hover {
+    color: red;
+    text-decoration: none;
+  }
+}
+
+
+
+@mixin box_sizing {
+  -moz-box-sizing:  border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+}
+
+
+aside {
+  section.user_info {
+  }
+  section {
+    padding: 10px 0;
+    margin-top: 20px;
+    &:first-child {
+      border: 0;
+      padding-top: 0;
+    }
+    span {
+      display: block;
+      margin-bottom: 3px;
+      line-height: 1;
+    }
+    h1 {
+      font-size: 1.4em;
+      text-align: left;
+      letter-spacing: -1px;
+      margin-bottom: 3px;
+      margin-top: 0px;
+    }
+  }
+}
+
+.user_avatars {
+  overflow: auto;
+  margin-top: 10px;
+  .gravatar {
+    margin: 1px 1px;
+  }
+  a {
+    padding: 0;
+  }
+}
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
+  @include box_sizing;
+}
+
+input {
+  height: auto !important;
+}
+
+#error_explanation {
+  color: red;
+  ul {
+    color: red;
+    margin: 0 0 30px 0;
+  }
+}
+
+.field_with_errors {
+  @extend .has-error;
+  .form-control {
+    color: $state-danger-text;
+  }
+}
+
+.checkbox {
+  margin-top: -10px;
+  margin-bottom: 10px;
+  span {
+    margin-left: 20px;
+    font-weight: normal;
+  }
+}
+
+#session_remember_me {
+  width: auto;
+  margin-left: 0;
+}
+
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid $gray-lighter;
+  }
+}
+
+footer {
+  background-color: white;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  height: 50px;
+  float: bottom;
+  margin-top: 15px;
+  //padding-top: 5px;
+  border-top: 1px solid $gray-medium-light;
+  color: $gray-light;
+  font-size: Lato;
+  a {
+    color: $gray;
+    &:hover {
+      color: $gray-darker;
+    }
+  }
+  ul {
+    padding-left: 0;
+    list-style: none;
+    li {
+      display: inline;
+      margin-left: 15px;
+      padding-bottom: 20px;
+    }
+  }
+}
