@@ -1,0 +1,16 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="container">
+    <%= link_to t("header.logo"), root_path, id: "logo" %>
+    <nav>
+      <ul class="navbar right-side">
+        <button type="button" class="btn btn-default"><%= t "header.login_button" %></button>
+      </ul>
+    </nav>
+  </div>
+</header>
+<div class="menu">
+  <%= link_to t("header.menu_new"), "#" %>
+  <%= link_to t("header.menu_gb"), "#" %>
+  <%= link_to t("header.menu_talk"), "#" %>
+  <%= link_to t("header.menu_polls"), "#" %>
+</div>
