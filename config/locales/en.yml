@@ -6,6 +6,7 @@ en:
     menu_gb: "GROUP-BUY"
     menu_talk: "TALK"
     menu_polls: "POOLS"
+    menu_communities: "COMMUNITIES"
   footer:
     about: "ABOUT"
     contact: "CONTACT"
@@ -44,6 +45,7 @@ en:
     destroy:
       flash_logout: "Logout successful"
   users:
+    flash_user_notfound: "User not found !!!"
     new:
       sign_up: "Sign up"
       label_name: "Name"
@@ -53,5 +55,6 @@ en:
       label_submit: "Create account"
     create:
       flash_signup: "Signup successful ! Login to join us"
-    find_user:
-      flash_user_notfound: "User not found !!!"
+  categories:
+    cate_notfound: "Category not found"
+
