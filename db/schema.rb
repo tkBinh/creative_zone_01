@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_19_202115) do
+ActiveRecord::Schema.define(version: 2018_06_23_191650) do
 
   create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "icon"
@@ -117,7 +117,6 @@ ActiveRecord::Schema.define(version: 2018_06_19_202115) do
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email"
-    t.string "password"
     t.string "password_digest"
     t.string "name"
     t.string "address"
@@ -126,6 +125,7 @@ ActiveRecord::Schema.define(version: 2018_06_19_202115) do
     t.text "about_me"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "remember_digest"
   end
 
   create_table "vote_options", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

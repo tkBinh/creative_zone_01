@@ -3,8 +3,20 @@
     <%= link_to t("header.logo"), root_path, id: "logo" %>
     <nav>
       <ul class="navbar right-side">
-        <button type="button" class="btn btn-default"><%= t "header.login_button" %></button>
+        <% if logged_in? %>
+          <%= link_to t("static_pages.logged_in"), "#" %>
+          <%= link_to t("static_pages.logout"), logout_path, method: :delete %>
+        <% else %>
+        <%= button_tag t("static_pages.login_button"), id: "modalLogin", class: "btn btn-default" %>
       </ul>
+      <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <%= render "layouts/login_form" %>
+          </div>
+        </div>
+      </div>
+        <% end %>
     </nav>
   </div>
 </header>
