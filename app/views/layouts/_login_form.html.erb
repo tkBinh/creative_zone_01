@@ -1,0 +1,29 @@
+<div class="wrap-login100">
+  <div class="login100-form-title" style="background-image: url(https://preview.ibb.co/emJB4o/bg_01.jpg);">
+    <span class="login100-form-title-1">
+      <%= t "static_pages.logo_signin" %>
+    </span>
+  </div>
+<%= form_for :session, url: login_path, html: {class: "login100-form"} do |f| %>
+
+  <%= f.label t "static_pages.label_username" %>
+  <%= f.email_field :email, class: "form-control" %>
+
+  <%= f.label t "static_pages.label_password" %>
+  <%= f.password_field :password, class: "form-control" %>
+
+  <%= f.label :remember_me, class: "checkbox inline" do %>
+  <%= f.check_box :remember_me %>
+  <span><%= t "static_pages.label_remember" %></span>
+  <% end %>
+    <br/><br/>
+    <div class="container-login100-form-btn">
+      <button class="login100-form-btn">
+        <%= t "static_pages.label_login" %>
+      </button>
+    </div>
+<% end %>
+  <div class="login-footer">
+      <span><%= t "static_pages.not_a_member" %><%= link_to t("static_pages.link_to_signup"), signup_path %></span>
+  </div>
+</div>
