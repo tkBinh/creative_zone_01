@@ -1,5 +1,4 @@
 en:
-  hello: "Hello world"
   header:
     logo: "Creative Zone"
     login_button: "Login"
@@ -15,6 +14,22 @@ en:
     company: "COMPANY"
     map: "MAP"
   static_pages:
+    base_title: "Creative Zone"
+    logged_in: "Logged in | "
+    logout: " Logout"
+    login_button: "Login"
+    logo_signin: "Sign in"
+    label_username: "Username"
+    label_password: "Password"
+    label_remember: "Remember me"
+    label_login: "Sign in"
+    not_a_member: "Not a member yet? "
+    link_to_signup: "Signup"
+    form_error: "There were problems... "
+    title_home: "Home"
+    title_about: "About"
+    title_contact: "Contact"
+    title_help: "Help"
     home:
       home_title: "Home Page"
     contact:
@@ -23,3 +38,20 @@ en:
       about_title: "About Page"
     help:
       help_title: "Help Page"
+  sessions:
+    create:
+      flash_login_fail: "Invalid email/password combination"
+    destroy:
+      flash_logout: "Logout successful"
+  users:
+    new:
+      sign_up: "Sign up"
+      label_name: "Name"
+      label_email: "Email"
+      label_pass: "Password"
+      label_pass_cf: "Confirm password"
+      label_submit: "Create account"
+    create:
+      flash_signup: "Signup successful ! Login to join us"
+    find_user:
+      flash_user_notfound: "User not found !!!"
