@@ -1,5 +1,6 @@
 length_max:
   name: 50
   email: 255
+  category_name: 30
 length_min:
   password: 6
