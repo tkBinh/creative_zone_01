@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="container">
     <%= link_to t("header.logo"), root_path, id: "logo" %>
@@ -19,4 +20,16 @@
         <% end %>
     </nav>
   </div>
+  <div class="menu">
+  <span class="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= t "header.menu_communities" %></a>
+      <ul class="dropdown-menu">
+        <%= render "categories/category" %>
+      </ul>
+  </span>
+  <%= link_to t("header.menu_new"), "#" %>
+  <%= link_to t("header.menu_gb"), product_path %>
+  <%= link_to t("header.menu_talk"), "#" %>
+  <%= link_to t("header.menu_polls"), poll_path %>
+</div>
 </header>

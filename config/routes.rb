@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+  get "products/new"
+  get "products/edit"
+  get "/poll", to: "products#poll"
+  get "/product", to: "products#show"
+  get "/make_vote", to: "vote_options#new"
+  get "vote_options/show"
   root "static_pages#home"
   get "/help", to: "static_pages#help"
   get "/about", to: "static_pages#about"

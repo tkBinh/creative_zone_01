@@ -4,6 +4,7 @@
 
 body {
   padding-top: 60px;
+  background-color: #eeeeee;
 }
 
 .navbar {
@@ -17,6 +18,7 @@ section {
 .jumbotron {
     padding-bottom: 1px;
     margin-top: 15px;
+    font-family: Lato;
 }
 
 textarea {
@@ -35,15 +37,53 @@ textarea {
 }
 
 .main{
-  background-color: $background-color-main;
+  background-color: #eeeeee;
   margin: 0 15% 10px;
-  background-color: white;
   -moz-border-radius: 10px;
--webkit-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  min-height: 1000px;
+  textarea {
+    width: 99%;
+  }
+  select {
+    margin-top: 10px;
+    width: 400px;
+    font-size: 15px;
+  }
+  p {
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eeeeee;
+  }
   h1 {
     padding-top: 10px;
   }
+  .make-product {
+    float: right;
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+    background-color: #eeeeee;
+    a {
+      color: white;
+      width: 300px;
+      float: right;
+      margin: 20px;
+      background-color: #14b6ad;
+      &:hover {
+        color: black;
+      }
+    }
+    .header-main {
+      margin-top: 40px;
+    }
+  }
+  .category-quest {
+    font-size: 20px;
+    font-weight: normal;
+    margin-top: 20px;
+  }
 }
+
 
 .right-side {
   float: right !important;
@@ -80,7 +120,7 @@ h2 {
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color: $gray-light;
+  color: black;
   font-family: Lato;
 }
 
@@ -90,14 +130,26 @@ p {
 }
 
 .menu {
-  height: 60px;
-  padding-top: 25px;
+  height: 42px;
+  padding-top: 9px;
   background-color: white;
   text-align: center;
   color:white;
   position: fixed;
   width: 100%;
+  border-top: 1px solid black;
   border-bottom: 1px solid black;
+  .dropdown-menu {
+    background: transparent;
+    padding: 0;
+  }
+  .dropdown-menu ul:hover {
+    background-color: #ddd;
+  }
+  .dropdown:hover .dropdown-menu {
+    display: block;
+    position: absolute;
+  }
   a {
     text-decoration: none;
     margin-top: 5px;
@@ -281,6 +333,10 @@ button.close {
 }
 
 .grid-menu {
+    table {
+      border-collapse:separate;
+      border-spacing: 0;
+    }
     td {
       border: 2px solid green;
       width: 100px;
@@ -305,3 +361,43 @@ button.close {
     background-repeat: no-repeat;
   }
 }
+
+.w3-animate-right {
+  animation: animateright 1s;
+}
+
+.form-control {
+  margin-top: 10px;
+  width: 85%;
+  textarea {
+    size: "10";
+  }
+}
+
+.product-left {
+  width: 50%;
+}
+
+.product-right {
+  float: right;
+}
+
+.product-new {
+  padding-left: 10px;
+}
+
+.form-create-option {
+  margin-left: 20%;
+  input {
+    width: 500px;
+  }
+  h5 {
+    padding-top: 10px;
+  }
+}
+
+.solid {
+  height: 30px;
+  border-bottom: 1px solid green;
+}
+

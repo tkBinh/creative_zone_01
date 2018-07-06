@@ -27,5 +27,7 @@
 
 # Ignore application configuration
 /config/application.yml
+# Category Banners
+/public/category-banner
 # Category Images
-/public/category-images
+/public/category-menu-images
