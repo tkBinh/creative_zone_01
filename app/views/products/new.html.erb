@@ -1,0 +1,31 @@
+<div class="main">
+  <div class="product-new">
+  <h2>Start a New Poll</h2>
+  <%= form_for make_vote_path do |f| %>
+    <p style="font-size: 16px;">Search before creating a poll as it may already be on Creative Zone.  Please read our poll guidelines <a href="#" style="color: green;">here.</a></p>
+
+    <div style="float: right; margin-right: 50px;">
+        <span class="category-quest">Avatar product for poll</span><br/><br/>
+        <%= f.file_field :image_vote %>
+      </div>
+    <div class="product-left">
+    <span class="category-quest">Which Community do your products belong to?</span>
+
+    <%= select_tag :category_id, options_for_select(@categories), prompt: "Select a community", class: "form-control" %>
+    <br/>
+
+      <span class="category-quest">Title Your Poll</span><br/>
+      <span style="font-family: 'Segoe UI',Arial,sans-serif;font-weight: 400;"><i>What type of  products are you interested in?</i></span>
+
+      <%= f.text_field :title, class: "form-control" %>
+
+    </div>
+      <span class="category-quest">Description</span><br/>
+      <span style="font-family: 'Segoe UI',Arial,sans-serif;font-weight: 400;"></span>
+
+    <%= f.text_area :description, rows: 5, style: "resize: none", class: "form-control" %>
+    <%= button_to "Add Options", make_vote_path, class: "form-control", style: "width: 200px; margin-left: 40%;" %>
+<% end %>
+</div>
+</div>
+

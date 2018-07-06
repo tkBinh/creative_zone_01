@@ -90,14 +90,18 @@ ActiveRecord::Schema.define(version: 2018_06_23_191650) do
 
   create_table "products", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title"
-    t.float "price"
-    t.datetime "end_buy"
+    t.float "price", default: 0.0
+    t.datetime "expired"
     t.text "description"
     t.integer "status", default: 0
+    t.string "image_vote"
+    t.string "image_sell"
+    t.bigint "user_id"
     t.bigint "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["category_id"], name: "index_products_on_category_id"
+    t.index ["user_id"], name: "index_products_on_user_id"
   end
 
   create_table "relationships", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -131,19 +135,11 @@ ActiveRecord::Schema.define(version: 2018_06_23_191650) do
 
   create_table "vote_options", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title"
-    t.integer "total_vote"
-    t.bigint "vote_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["vote_id"], name: "index_vote_options_on_vote_id"
-  end
-
-  create_table "votes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.datetime "expires_at"
+    t.string "avatar"
     t.bigint "product_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["product_id"], name: "index_votes_on_product_id"
+    t.index ["product_id"], name: "index_vote_options_on_product_id"
   end
 
   add_foreign_key "comments", "users"
@@ -154,8 +150,8 @@ ActiveRecord::Schema.define(version: 2018_06_23_191650) do
   add_foreign_key "posts", "categories"
   add_foreign_key "posts", "users"
   add_foreign_key "products", "categories"
+  add_foreign_key "products", "users"
   add_foreign_key "user_vote_choices", "users"
   add_foreign_key "user_vote_choices", "vote_options"
-  add_foreign_key "vote_options", "votes"
-  add_foreign_key "votes", "products"
+  add_foreign_key "vote_options", "products"
 end

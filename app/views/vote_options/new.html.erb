@@ -1,0 +1,67 @@
+<h2>Product Options</h2>
+<div class="main">
+  <div class="form-create-option">
+    <h5>Make an options here !!!</h5>
+    <%= form_for poll_path do |f| %>
+    <span class="category-quest">Title of Option</span><br/>
+
+      <%= f.text_field :title, class: "form-control" %>
+
+    <span class="category-quest">Image for option</span><br/><br/>
+        <%= f.file_field :image_vote %>
+
+         <button style="width: 300px; margin-left: 50px;" class="form-control btn btn-primary">Done</button>
+      <%= button_to "Create an option", poll_path, class: "form-control btn btn-success", style: "width: 500px; float: left;", method: :get %>
+
+    </span>
+  </div>
+
+    <% end %>
+    <div class="solid"></div>
+  <div class="options">
+
+    <div style="height: 450px; width: 286px; background-color: green; margin: 30px 0 10px 30px; float: left; -webkit-border-radius: 10px;">
+
+      <div style="height: 286px; width: 100%; background-color: white;"></div>
+      <div style="height: 54px;">Seagull 1963 with White Dial</div>
+      <div style="height: 70px;">-by a community member</div>
+      <div>
+      <button class="btn btn-success" style="width: 98%;margin-left: 3px;">VOTE</button>
+    </div>
+    </div>
+
+   <div style="height: 450px; width: 286px; background-color: green; margin: 30px 0 10px 30px; float: left; -webkit-border-radius: 10px;">
+
+      <div style="height: 286px; width: 100%; background-color: white;"></div>
+      <div style="height: 54px;">Seagull 1963 with White Dial</div>
+      <div style="height: 70px;">-by a community member</div>
+      <div>
+      <button class="btn btn-success" style="width: 98%;margin-left: 3px;">VOTE</button>
+    </div>
+    </div>
+
+    <div style="height: 450px; width: 286px; background-color: green; margin: 30px 0 10px 30px; float: left; -webkit-border-radius: 10px;">
+
+      <div style="height: 286px; width: 100%; background-color: white;"></div>
+      <div style="height: 54px;">Seagull 1963 with White Dial</div>
+      <div style="height: 70px;">-by a community member</div>
+      <div>
+      <button class="btn btn-success" style="width: 98%;margin-left: 3px;">VOTE</button>
+    </div>
+    </div>
+
+    <div style="height: 450px; width: 286px; background-color: green; margin: 30px 0 10px 30px; float: left; -webkit-border-radius: 10px;">
+
+      <div style="height: 286px; width: 100%; background-color: white;"></div>
+      <div style="height: 54px;">Seagull 1963 with White Dial</div>
+      <div style="height: 70px;">-by a community member</div>
+      <div>
+      <button class="btn btn-success" style="width: 98%;margin-left: 3px;">VOTE</button>
+    </div>
+    </div>
+
+    <%= button_to "Done", poll_path, style: "width: 280px;margin-right: 20px;  float: right;", class: "form-control btn btn-primary", method: :get %>
+  </div>
+
+</div>
+
